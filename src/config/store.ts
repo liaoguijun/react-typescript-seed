@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import reducer, { IRootState } from '../shared/reducers';
+import reducer, { IRootState } from 'shared/reducers';
 import loggerMiddleware from './logger-middleware';
 
 const defaultMiddlewares = [

@@ -1,4 +1,4 @@
-import { setLocale } from '../shared/reducers/locale';
+import { setLocale } from 'shared/reducers/locale';
 
 export const languages: any = {
   'zh-cn': { name: '中文（简体）' },
