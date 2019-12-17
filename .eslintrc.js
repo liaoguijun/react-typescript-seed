@@ -33,6 +33,17 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'react/jsx-uses-react': 2,
+    'react/jsx-uses-vars': 2,
+    'react/react-in-jsx-scope': 2,
+    quotes: ['error', 'single'],
+    'react/jsx-indent': ['error', 'tab'],
+    'react/jsx-indent-props': ['error', 'tab'],
+    'no-tabs': 'off',
+    'no-restricted-syntax': 0,
+    'guard-for-in': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
+    'react/prefer-stateless-function': 0,
+    'react/forbid-prop-types': [0, { forbid: ['object'] }],
   },
 };

@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const ACTION_TYPES = {
   SET_LOCALE: 'locale/SET_LOCALE',
 };

@@ -1,21 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  Router, Route, Switch,
+} from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { connect } from 'react-redux';
+import { IRootState } from 'shared/reducers';
+import environment from 'config/environment';
 import './App.scss';
+import AppRoutes from './routes';
 
-const App: React.FC = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit
-        <code>src/App.tsx</code>
-        and save to reload.
-      </p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
-    </header>
-  </div>
+const history = createBrowserHistory();
+export interface IAppProps extends StateProps, DispatchProps {}
+
+const App: React.FC = (props: IAppProps) => (
+	<Router history={history}>
+		<Switch>
+			<Route path={`${environment.baseUrl}`}>
+				<AppRoutes />
+			</Route>
+		</Switch>
+	</Router>
 );
+const mapStateToProps = (state:IRootState) => ({
 
-export default App;
+});
+const mapDispatchToProps = {};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);
