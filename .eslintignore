@@ -1,0 +1,7 @@
+!.eslintrc.js
+src/serviceWorker.ts
+*.test.js
+src/components/*
+src/assets/*
+config/*
+scripts/*

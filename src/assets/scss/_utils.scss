@@ -1,0 +1,120 @@
+@import './mixins/clearfix';
+
+$i: 0;
+@while $i < 100 {
+  .pd-#{$i} {
+    padding: #{$i}px !important;
+  }
+  .pdt-#{$i} {
+    padding-top: #{$i}px !important;
+  }
+  .pdb-#{$i} {
+    padding-bottom: #{$i}px !important;
+  }
+  .pdl-#{$i} {
+    padding-left: #{$i}px !important;
+  }
+  .pdr-#{$i} {
+    padding-right: #{$i}px !important;
+  }
+  .mg-#{$i} {
+    margin: #{$i}px !important;
+  }
+  .mgt-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .mgb-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  .mgl-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+  .mgr-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+  .ft-#{$i} {
+    font-size: #{$i}px !important;
+  }
+  .line-height-#{$i} {
+    line-height: #{$i}px !important;
+  }
+  $i: $i + 1;
+}
+.mg-auto {
+  margin: auto;
+}
+/*css为clearfix，清除浮动*/
+.clearfix {
+  @include clearfix();
+}
+/*单行溢出*/
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*多行溢出 手机端使用*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.text-white {
+  color: white;
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.db {
+  display: block !important;
+}
+
+.dib {
+  display: inline-block !important;
+}
+
+.dn {
+  display: none !important;
+}
+
+.df {
+  display: flex !important;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.bold {
+  font-weight: bold;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.whole-row {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
