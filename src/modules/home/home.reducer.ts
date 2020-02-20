@@ -1,3 +1,6 @@
+/* 异步请求 */
+// import { REQUEST, SUCCESS, FAILURE } from 'shared/util/action-type.util';
+
 export const ACTION_TYPES = {
 };
 

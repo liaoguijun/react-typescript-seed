@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import { IRootState } from 'shared/reducers';
 import {} from './home.reducer';
 import './home.scss';
+import { translate } from 'shared/util/translator';
 
 export interface IHomeProp extends StateProps, DispatchProps, RouteComponentProps {}
 
 export const Home = (props: IHomeProp) => (
 	<div>
-    Home
+		{translate('global.main')}
 	</div>
 );
 

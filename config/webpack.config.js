@@ -24,6 +24,7 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const MergeJsonWebpackPlugin = require('merge-jsons-webpack-plugin');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -606,6 +607,12 @@ module.exports = function(webpackEnv) {
             entrypoints: entrypointFiles,
           };
         },
+      }),
+      new MergeJsonWebpackPlugin({
+        output: {
+          groupBy: [
+            { pattern: "src/i18n/zh-cn/*.json", fileName: "./i18n/zh-cn.json" }
+        ]}
       }),
       // Moment.js is an extremely popular library that bundles large locale files
       // by default due to how Webpack interprets its code. This is a practical
