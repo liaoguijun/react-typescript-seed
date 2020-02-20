@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-@import './assets/scss/mixins/clearfix';
-@import './assets/scss/utils';
-@import './assets/scss/layout';
-@import './assets/scss/common';
-@import './assets/scss/variables';
+@import './mixins/clearfix';
+@import './utils';
+@import './layout';
+@import './common';
+@import './variables';
 
 /* 禁用iPhone中Safari的字号自动调整 */
 html {
