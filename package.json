@@ -2,6 +2,7 @@
   "name": "react-typescript-seed",
   "version": "0.1.0",
   "private": true,
+  "license": "Apache-2.0",
   "jest": {
     "roots": [
       "<rootDir>/src"
