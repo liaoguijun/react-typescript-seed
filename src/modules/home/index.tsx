@@ -10,9 +10,9 @@ import { translate } from 'shared/util/translator';
 export interface IHomeProp extends StateProps, DispatchProps, RouteComponentProps {}
 
 export const Home = (props: IHomeProp) => (
-	<div>
-		{translate('global.main')}
-	</div>
+  <div>
+    {translate('global.main')}
+  </div>
 );
 
 const mapStateToProps = ({ home }: IRootState) => ({

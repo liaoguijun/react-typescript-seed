@@ -10,11 +10,11 @@ const Home = Loadable({
 });
 
 const Routes = () => (
-	<div>
-		<Switch>
-			<Route path={`${environment.baseUrl}`} component={Home} />
-		</Switch>
-	</div>
+  <div>
+    <Switch>
+      <Route path={`${environment.baseUrl}`} component={Home} />
+    </Switch>
+  </div>
 );
 
 export default Routes;

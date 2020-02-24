@@ -7,15 +7,18 @@ import 'assets/scss/index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import initStore from './config/store';
+import setupAxiosInterceptors from './config/axios-interceptor';
 
 const store = initStore();
 registerLocale(store);
 
+setupAxiosInterceptors();
+
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById('root'),
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

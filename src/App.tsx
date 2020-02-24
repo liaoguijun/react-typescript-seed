@@ -13,13 +13,13 @@ const history = createBrowserHistory();
 export interface IAppProps extends StateProps, DispatchProps {}
 
 const App: React.FC = (props: IAppProps) => (
-	<Router history={history}>
-		<Switch>
-			<Route path={`${environment.baseUrl}`}>
-				<AppRoutes />
-			</Route>
-		</Switch>
-	</Router>
+  <Router history={history}>
+    <Switch>
+      <Route path={`${environment.baseUrl}`}>
+        <AppRoutes />
+      </Route>
+    </Switch>
+  </Router>
 );
 const mapStateToProps = (state:IRootState) => ({
 
