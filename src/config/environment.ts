@@ -1,5 +1,5 @@
 const environment = {
-  baseUrl: '',
+  baseUrl: '/',
 };
 
 export default environment;
