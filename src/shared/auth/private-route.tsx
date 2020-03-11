@@ -13,12 +13,9 @@ const PrivateRouteComponent = ({
   isAuthenticated,
   sessionHasBeenFetched,
   hasAnyAuthorities = [],
-  isAuthorized,
   ...rest
 }: IPrivateRouteProps) => {
-  const checkAuthorities = (props) => (isAuthorized ? (
-    <Component {...props} />
-  ) : <div className="display-flex-absolute"><div className="mg-auto ft-30">暂无权限</div></div>);
+  const checkAuthorities = (props) => <Component {...props} />;
   const renderRedirect = (props) => {
     if (!sessionHasBeenFetched) {
       return <div />;
@@ -26,8 +23,8 @@ const PrivateRouteComponent = ({
     return isAuthenticated ? (
       checkAuthorities(props)
     ) : (
-      <Redirect to={{ pathname: '/login' }} />
-    );
+        <Redirect to={{ pathname: '/login' }} />
+      );
   };
   return <Route {...rest} render={renderRedirect} />;
 };
@@ -42,11 +39,10 @@ export const hasAnyAuthority = (authorities: string[], hasAnyAuthorities: string
   return false;
 };
 const mapStateToProps = ({
-  auth: { isAuthenticated, account, sessionHasBeenFetched },
+  auth: { isAuthenticated, sessionHasBeenFetched },
 }: IRootState, { hasAnyAuthorities = [] }: IOwnProps) => ({
   isAuthenticated,
   sessionHasBeenFetched,
-  isAuthorized: hasAnyAuthority(account, hasAnyAuthorities),
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;
