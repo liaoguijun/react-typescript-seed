@@ -24,7 +24,7 @@ const flatten = (array) => {
   return array;
 };
 
-const toTemplate = string => {
+const toTemplate = (string) => {
   const expressionRe = /{{\s?\w+\s?}}/g;
   const match = string.match(expressionRe) || [];
   return [string.split(expressionRe), ...match];
