@@ -75,21 +75,3 @@
   left: 0;
   display: flex;
 }
-.list-form .am-list-body{
-  background-color: #ddd;
-}
-.list-element {
-  margin-bottom: 1PX;
-}
-.list-element .am-list-line::after{
-  display: none!important;
-}
-.qr-code {
-  background-color: white;
-  color:$normal-text;
-  text-align: center;
-  img {
-    width: 50%;
-    margin: auto;
-  }
-}

@@ -23,8 +23,8 @@ const PrivateRouteComponent = ({
     return isAuthenticated ? (
       checkAuthorities(props)
     ) : (
-        <Redirect to={{ pathname: '/login' }} />
-      );
+      <Redirect to={{ pathname: '/login' }} />
+    );
   };
   return <Route {...rest} render={renderRedirect} />;
 };
